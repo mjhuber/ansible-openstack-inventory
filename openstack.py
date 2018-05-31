@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 This script queries an openstack API and returns an ansible inventory.
