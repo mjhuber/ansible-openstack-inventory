@@ -1,13 +1,15 @@
 # ansible-openstack-inventory
-This dynamic ansible inventory script collects an inventory of compute hosts form openstack.
+This dynamic ansible inventory script collects an inventory of compute hosts from openstack.
 
+## Requirements
 Ensure the following variables are set:
 * url: url to the openstack web service (eg: http://openstack.org:5000/)
 * username: username of an account with access to the API for the tracked projects
 * password: password of an account with access to the API for the tracked projects
 * domain: domain name of an account with access to the API for the tracked projects
-* trackedProjects: list of project Ids to collect data from.  You can get this id
-  in the openstack web portal by going to Project => API access and downloading the clouds.yaml file.
+
+An environment variable named ANSIBLE_OS_PROJECTS must contain a string of comma separated project names that should be tracked.
+
 
 ## Groups
 For each openstack project tracked, a group with the project name is added to the ansible inventory.
